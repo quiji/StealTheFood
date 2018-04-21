@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/raccoon/raccoon.gd" type="Script" id=1]
+[ext_resource path="res://assets/RaccoonPlane.png" type="Texture" id=2]
+[ext_resource path="res://characters/raccoon/gen_propeller.tscn" type="PackedScene" id=3]
+
+[node name="raccoon" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 7
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+rotation = 1.5708
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="propeller" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 35, 0 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="2"]
+
+build_mode = 0
+polygon = PoolVector2Array( 16, -8, 32, -8, 32, 8, 16, 8, 15, 36, -5, 36, -3, 8, -33, 4, -33, -3, -1, -7, -4, -35, 15, -35 )
+
+

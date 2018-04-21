@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/tiles.png" type="Texture" id=1]
+
+[node name="Tiles" type="Node2D"]
+
+[node name="grass_00" type="Sprite" parent="." index="0"]
+
+position = Vector2( 16, 16 )
+texture = ExtResource( 1 )
+hframes = 4
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass_01" type="Sprite" parent="." index="1"]
+
+position = Vector2( 41, 16 )
+texture = ExtResource( 1 )
+hframes = 4
+frame = 1
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass_02" type="Sprite" parent="." index="2"]
+
+position = Vector2( 70, 17 )
+texture = ExtResource( 1 )
+hframes = 4
+frame = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass_03" type="Sprite" parent="." index="3"]
+
+position = Vector2( 100, 18 )
+texture = ExtResource( 1 )
+hframes = 4
+frame = 3
+_sections_unfolded = [ "Animation" ]
+
+

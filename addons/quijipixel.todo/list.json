@@ -1,0 +1,130 @@
+{
+  "completed": {
+  },
+  "pending": {
+    "task.0": {
+      "task": "Enemy Pilots AI",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 47,
+        "second": 21
+      }
+    },
+    "task.1": {
+      "task": "Tower With lights",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 47,
+        "second": 28
+      }
+    },
+    "task.2": {
+      "task": "Game modes: Alarm and stealth.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 47,
+        "second": 44
+      }
+    },
+    "task.3": {
+      "task": "Food items",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 47,
+        "second": 53
+      }
+    },
+    "task.4": {
+      "task": "Victory and Loose conditions.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 48,
+        "second": 2
+      }
+    },
+    "task.5": {
+      "task": "Bullets",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 48,
+        "second": 50
+      }
+    },
+    "task.6": {
+      "task": "Damage",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 48,
+        "second": 54
+      }
+    },
+    "task.7": {
+      "task": "Distraction granade",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 49,
+        "second": 1
+      }
+    }
+  },
+  "comp_order": [
+  ],
+  "pend_order": [
+    "task.0",
+    "task.1",
+    "task.2",
+    "task.3",
+    "task.4",
+    "task.5",
+    "task.6",
+    "task.7"
+  ]
+}

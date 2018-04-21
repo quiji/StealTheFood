@@ -1,0 +1,215 @@
+{
+  "generators": {
+    "SpriteAnim2D.1": {
+      "name": "propeller",
+      "spritesheet": "res://assets/RaccoonPropeller.png",
+      "sprite_width": 40,
+      "sprite_height": 8,
+      "animations": {
+        "Propel": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 8,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 11,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 12,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 13,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 14,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 15,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://characters/raccoon"
+    },
+    "SpriteAnim2D.2": {
+      "name": "enemy_propeller",
+      "spritesheet": "res://assets/EnemyPropeller.png",
+      "sprite_width": 40,
+      "sprite_height": 8,
+      "animations": {
+        "Propel": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 8,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 11,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 12,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 13,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 14,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 15,
+              "time": 18,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://characters/enemy"
+    }
+  },
+  "last_id": 3
+}
