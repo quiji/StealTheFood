@@ -8,6 +8,11 @@
 
 config_version=3
 
+[Project]
+
+patch=0
+minor=1
+
 [application]
 
 config/name="Steal The Food"
@@ -17,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Smoothstep="*res://classes/Smoothstep.gd"
+Console="*res://addons/quijipixel.console/Console.tscn"
 
 [display]
 
@@ -49,6 +55,13 @@ texture={
 "stream": false,
 "svg/scale": 1.0
 }
+
+[input]
+
+toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"unicode":0,"echo":false,"script":null)
+ ]
+shoot=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
 
 [layer_names]
 

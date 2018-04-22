@@ -209,7 +209,397 @@
         }
       },
       "target_dir": "res://characters/enemy"
+    },
+    "SpriteAnim2D.3": {
+      "name": "tower_notices",
+      "spritesheet": "res://assets/TowerNotices.png",
+      "sprite_width": 40,
+      "sprite_height": 40,
+      "animations": {
+        "Question": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 120,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 120,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 120,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 120,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 120,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 120,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 120,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Alert": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 8,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://characters/tower"
+    },
+    "SpriteAnim2D.4": {
+      "name": "raccoon_plane",
+      "spritesheet": "res://assets/RaccoonPlane.png",
+      "sprite_width": 88,
+      "sprite_height": 86,
+      "animations": {
+        "Flying": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Blasted": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 7,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 8,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 49,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 48,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 11,
+              "time": 47,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 12,
+              "time": 46,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 13,
+              "time": 45,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 14,
+              "time": 44,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 15,
+              "time": 43,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://characters/raccoon"
+    },
+    "SpriteAnim2D.5": {
+      "name": "enemy_plane",
+      "spritesheet": "res://assets/EnemyPlane.png",
+      "sprite_width": 88,
+      "sprite_height": 86,
+      "animations": {
+        "Flying": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Blasted": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 7,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 8,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 49,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 48,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 11,
+              "time": 47,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 12,
+              "time": 46,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 13,
+              "time": 45,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 14,
+              "time": 44,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 15,
+              "time": 43,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Fall": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 13,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 14,
+              "time": 40,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 15,
+              "time": 30,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://characters/enemy"
+    },
+    "SpriteAnim2D.6": {
+      "name": "bullet",
+      "spritesheet": "res://assets/Bullet.png",
+      "sprite_height": 8,
+      "sprite_width": 16,
+      "animations": {
+        "Default": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 8,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://bullets"
     }
   },
-  "last_id": 3
+  "last_id": 7
 }

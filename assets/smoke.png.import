@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnemyPlane.png-b21c9a6dfc08714463daa0a405dbb5ee.stex"
+path="res://.import/smoke.png-dd48eb81a12e0cb45caa95e293df3180.stex"
 
 [deps]
 
-source_file="res://assets/EnemyPlane.png"
-source_md5="c2d87df36703abf328b00e73da2d8c5d"
+source_file="res://assets/smoke.png"
+source_md5="2bdce507e6ec20fde630246d1ecb64d1"
 
-dest_files=[ "res://.import/EnemyPlane.png-b21c9a6dfc08714463daa0a405dbb5ee.stex" ]
-dest_md5="981142d6a5a6b854740d973256cf80a8"
+dest_files=[ "res://.import/smoke.png-dd48eb81a12e0cb45caa95e293df3180.stex" ]
+dest_md5="271bfebfc76edb595e336f9dabf29929"
 
 [params]
 

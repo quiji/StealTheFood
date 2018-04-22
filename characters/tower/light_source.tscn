@@ -56,4 +56,13 @@ _sections_unfolded = [ "Shadow" ]
 build_mode = 0
 polygon = PoolVector2Array( -0.00666428, 0.5, 356.456, -149, 373.456, -106, 386.456, -68, 391.456, -26, 388.456, 49, 370.456, 106, 351.456, 151 )
 
+[node name="tween" type="Tween" parent="." index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnemyPlane.png-b21c9a6dfc08714463daa0a405dbb5ee.stex"
+path="res://.import/TowerNotices.png-8a69d02157e10a964c227157663fb3d9.stex"
 
 [deps]
 
-source_file="res://assets/EnemyPlane.png"
-source_md5="c2d87df36703abf328b00e73da2d8c5d"
+source_file="res://assets/TowerNotices.png"
+source_md5="ed9afe013736e2d4f94666c5f30aa5fa"
 
-dest_files=[ "res://.import/EnemyPlane.png-b21c9a6dfc08714463daa0a405dbb5ee.stex" ]
-dest_md5="981142d6a5a6b854740d973256cf80a8"
+dest_files=[ "res://.import/TowerNotices.png-8a69d02157e10a964c227157663fb3d9.stex" ]
+dest_md5="5fb5949d602bc15d1392125b4c8a82c7"
 
 [params]
 

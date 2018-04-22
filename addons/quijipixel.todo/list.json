@@ -1,5 +1,29 @@
 {
   "completed": {
+    "task.1": {
+      "task": "Tower With lights",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 47,
+        "second": 28
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 7,
+        "minute": 7,
+        "second": 32
+      }
+    }
   },
   "pending": {
     "task.0": {
@@ -14,20 +38,6 @@
         "hour": 16,
         "minute": 47,
         "second": 21
-      }
-    },
-    "task.1": {
-      "task": "Tower With lights",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 4,
-        "day": 21,
-        "weekday": 6,
-        "dst": false,
-        "hour": 16,
-        "minute": 47,
-        "second": 28
       }
     },
     "task.2": {
@@ -113,18 +123,33 @@
         "minute": 49,
         "second": 1
       }
+    },
+    "task.8": {
+      "task": "Create levels!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 9,
+        "minute": 41,
+        "second": 35
+      }
     }
   },
   "comp_order": [
+    "task.1"
   ],
   "pend_order": [
     "task.0",
-    "task.1",
     "task.2",
     "task.3",
     "task.4",
     "task.5",
     "task.6",
-    "task.7"
+    "task.7",
+    "task.8"
   ]
 }
