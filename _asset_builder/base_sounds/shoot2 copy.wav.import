@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shoot2 copy.wav-ff2d82e5e862acffc7e0f4675a3dc69d.sample"
+
+[deps]
+
+source_file="res://_asset_builder/base_sounds/shoot2 copy.wav"
+source_md5="06568573850da7c46d04772745c79447"
+
+dest_files=[ "res://.import/shoot2 copy.wav-ff2d82e5e862acffc7e0f4675a3dc69d.sample" ]
+dest_md5="2fff510009c2fbc04689ff3057a45aee"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ground_hit.wav-b01888107a1ea1a260da0a14ecc56546.sample"
+
+[deps]
+
+source_file="res://assets/ground_hit.wav"
+source_md5="fc5bd623d90c10620abff6df326a4e6d"
+
+dest_files=[ "res://.import/ground_hit.wav-b01888107a1ea1a260da0a14ecc56546.sample" ]
+dest_md5="630bb12c630e8a298f019fbee92f5808"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

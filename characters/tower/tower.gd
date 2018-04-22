@@ -61,6 +61,8 @@ func set_mode(new_mode):
 
 		emit_signal("found_something")
 
+		$found.play()
+
 		$circle_light.enabled = true
 		$tower_notices.show()
 		$tower_notices/anim_player.play("Question")
@@ -80,6 +82,8 @@ func set_mode(new_mode):
 
 		$circle_light.enabled = false
 		$tower_notices.hide()
+
+		$is_nothing.play()
 
 		$light_source.sweep_mode()
 		if target != null:

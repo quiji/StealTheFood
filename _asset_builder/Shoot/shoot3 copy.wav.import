@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shoot3 copy.wav-9243124903dbdb2083cde0c7f1dc3b41.sample"
+
+[deps]
+
+source_file="res://_asset_builder/Shoot/shoot3 copy.wav"
+source_md5="c854249b604e3d2f337951aaa047c35e"
+
+dest_files=[ "res://.import/shoot3 copy.wav-9243124903dbdb2083cde0c7f1dc3b41.sample" ]
+dest_md5="3e0226afc088ca39d0c4f367f0d2e0e5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

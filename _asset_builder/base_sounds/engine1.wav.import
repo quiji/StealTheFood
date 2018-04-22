@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/engine1.wav-263be8efb9277c57aa2c8d3378f27330.sample"
+
+[deps]
+
+source_file="res://_asset_builder/base_sounds/engine1.wav"
+source_md5="e4c4d48dfe657db4b6dc5752c04ead9e"
+
+dest_files=[ "res://.import/engine1.wav-263be8efb9277c57aa2c8d3378f27330.sample" ]
+dest_md5="900a250ad5c3a90ced03e3d4a759e50a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

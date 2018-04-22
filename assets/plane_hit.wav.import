@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/plane_hit.wav-27f539e2b903f16269974fd39afd8054.sample"
+
+[deps]
+
+source_file="res://assets/plane_hit.wav"
+source_md5="c7342155cb97e1898810267a40c1469b"
+
+dest_files=[ "res://.import/plane_hit.wav-27f539e2b903f16269974fd39afd8054.sample" ]
+dest_md5="41472352020f3003641b7a52886b5a03"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

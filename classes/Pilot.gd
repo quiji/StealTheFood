@@ -64,6 +64,8 @@ func _physics_process(delta):
 func plane_destroyed():
 	if not destroyed:
 		
+		$plane_sounds.play_crash()
+		
 		if has_node("propeller"):
 			$propeller.hide()
 			

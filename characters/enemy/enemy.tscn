@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://characters/enemy/enemy.gd" type="Script" id=1]
 [ext_resource path="res://characters/enemy/gen_enemy_plane.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/enemy/gen_enemy_propeller.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sparks/shoot_light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sound/plane_sounds.tscn" type="PackedScene" id=5]
 
 [node name="enemy" type="KinematicBody2D"]
 
@@ -33,5 +34,7 @@ polygon = PoolVector2Array( 16, -8, 32, -8, 32, 8, 16, 8, 15, 36, -5, 36, -3, 8,
 [node name="shoot_light" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 39, -28 )
+
+[node name="plane_sounds" parent="." index="4" instance=ExtResource( 5 )]
 
 

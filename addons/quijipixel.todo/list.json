@@ -23,6 +23,78 @@
         "minute": 7,
         "second": 32
       }
+    },
+    "task.5": {
+      "task": "Bullets",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 48,
+        "second": 50
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 55,
+        "second": 14
+      }
+    },
+    "task.10": {
+      "task": "Music",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 55,
+        "second": 28
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 58,
+        "second": 21
+      }
+    },
+    "task.9": {
+      "task": "SFX",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 55,
+        "second": 23
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 58,
+        "second": 23
+      }
     }
   },
   "pending": {
@@ -82,20 +154,6 @@
         "second": 2
       }
     },
-    "task.5": {
-      "task": "Bullets",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 4,
-        "day": 21,
-        "weekday": 6,
-        "dst": false,
-        "hour": 16,
-        "minute": 48,
-        "second": 50
-      }
-    },
     "task.6": {
       "task": "Damage",
       "type": "Task",
@@ -137,19 +195,96 @@
         "minute": 41,
         "second": 35
       }
+    },
+    "task.11": {
+      "task": "Menu",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 55,
+        "second": 40
+      }
+    },
+    "task.12": {
+      "task": "Title screen",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 55,
+        "second": 46
+      }
+    },
+    "task.13": {
+      "task": "Intro to stage",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 55,
+        "second": 51
+      }
+    },
+    "task.14": {
+      "task": "Tutorial",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 55,
+        "second": 55
+      }
+    },
+    "task.15": {
+      "task": "Music",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 58,
+        "second": 27
+      }
     }
   },
   "comp_order": [
-    "task.1"
+    "task.1",
+    "task.5",
+    "task.10",
+    "task.9"
   ],
   "pend_order": [
     "task.0",
     "task.2",
     "task.3",
     "task.4",
-    "task.5",
     "task.6",
     "task.7",
-    "task.8"
+    "task.8",
+    "task.11",
+    "task.12",
+    "task.13",
+    "task.14",
+    "task.15"
   ]
 }

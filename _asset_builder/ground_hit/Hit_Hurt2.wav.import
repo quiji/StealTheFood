@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hit_Hurt2.wav-520a90a67949ad5cf0de5f7aed1bb2fa.sample"
+
+[deps]
+
+source_file="res://_asset_builder/ground_hit/Hit_Hurt2.wav"
+source_md5="5199bac1469e6027e5b55778ae0b58c4"
+
+dest_files=[ "res://.import/Hit_Hurt2.wav-520a90a67949ad5cf0de5f7aed1bb2fa.sample" ]
+dest_md5="14a8a1466c53b42758ec43f690873fad"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

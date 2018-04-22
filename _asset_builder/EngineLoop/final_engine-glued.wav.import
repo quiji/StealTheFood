@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/final_engine-glued.wav-db82a73e81b7ff1a1669e0407a66f6db.sample"
+
+[deps]
+
+source_file="res://_asset_builder/EngineLoop/final_engine-glued.wav"
+source_md5="89b3c32ad87c5185f83b9e43035c9e74"
+
+dest_files=[ "res://.import/final_engine-glued.wav-db82a73e81b7ff1a1669e0407a66f6db.sample" ]
+dest_md5="2c0cdb6302aaedc69e21632be9fdf280"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

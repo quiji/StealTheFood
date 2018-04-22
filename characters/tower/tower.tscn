@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Tower.png" type="Texture" id=1]
 [ext_resource path="res://characters/tower/tower.gd" type="Script" id=2]
 [ext_resource path="res://characters/tower/light_source.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/tower/gen_tower_notices.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/circle_light.png" type="Texture" id=5]
+[ext_resource path="res://assets/discovered.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/is_nothing.wav" type="AudioStream" id=7]
 
-[node name="tower" type="Sprite" index="0"]
+[node name="tower" type="Sprite"]
 
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
@@ -55,5 +57,25 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+
+[node name="found" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = ExtResource( 6 )
+volume_db = -5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "SFX"
+area_mask = 1
+
+[node name="is_nothing" type="AudioStreamPlayer2D" parent="." index="5"]
+
+stream = ExtResource( 7 )
+volume_db = -5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "SFX"
+area_mask = 1
 
 

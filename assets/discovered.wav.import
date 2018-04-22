@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/discovered.wav-a1eba06e04db68d060a59181f4eeb03e.sample"
+
+[deps]
+
+source_file="res://assets/discovered.wav"
+source_md5="9c358c3e8c18926f24ca7fa9b8205507"
+
+dest_files=[ "res://.import/discovered.wav-a1eba06e04db68d060a59181f4eeb03e.sample" ]
+dest_md5="1b303492c023cf7a12053b311d7d04fa"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

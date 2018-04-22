@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosion.wav-a6fd46b25aebc7db1f80c1c0c5995ba7.sample"
+
+[deps]
+
+source_file="res://_asset_builder/plane_hit/Explosion.wav"
+source_md5="834d8c9266f2ba67361e876515622368"
+
+dest_files=[ "res://.import/Explosion.wav-a6fd46b25aebc7db1f80c1c0c5995ba7.sample" ]
+dest_md5="59dfc0b0d99af1cff6e5a1705f225c14"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
