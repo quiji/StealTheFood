@@ -23,4 +23,4 @@ func process_ai(delta):
 		shoot_bullet()
 
 func pilot_failed():
-	get_parent().raccoon_failed()
+	Glb.raccoon_failed()

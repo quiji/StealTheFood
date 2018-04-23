@@ -5,7 +5,7 @@ extends Node2D
 # var b = "textvar"
 
 func _ready():
-	$tween.interpolate_property($engine, "volume_db", -80, -5, 1.0, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	$tween.interpolate_property($engine, "volume_db", -80, 0, 1.0, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$tween.start()
 
 

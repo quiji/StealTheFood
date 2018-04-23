@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/StealTheThief.ogg-1717d80916323c323f87873e4db55a0d.oggstr"
+
+[deps]
+
+source_file="res://assets/StealTheThief.ogg"
+source_md5="d4973e41bb7fd57999c9f2a170e8529b"
+
+dest_files=[ "res://.import/StealTheThief.ogg-1717d80916323c323f87873e4db55a0d.oggstr" ]
+dest_md5="74f360dc53a879ecdb8f17197424fd24"
+
+[params]
+
+loop=true
+loop_offset=0

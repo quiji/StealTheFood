@@ -53,7 +53,7 @@ func configure():
 
 func pilot_failed():
 	remove_from_group("EnemyPilots")
-	get_parent().enemy_pilot_failed()
+	Glb.enemy_pilot_failed()
 
 func get_direction_from_normal(normal):
 	var left_vector = direction.tangent()
@@ -90,7 +90,7 @@ func process_ai(delta):
 	else:
 		Console.add_log("survival", "NO")
 
-	var target = get_parent().get_raccoon()
+	var target = Glb.get_raccoon()
 
 	if target != null and survival_state == NO_DANGER:
 	

@@ -1,10 +1,13 @@
 extends Node2D
 
 var CameraCrew = preload("res://gui/camera_crew.tscn")
+var Maestro = preload("res://sound/maestro.tscn")
 var EnemyPlane = preload("res://characters/enemy/enemy.tscn")
 var Raccoon = preload("res://characters/raccoon/raccoon.tscn")
 
+
 var camera_crew = null
+var music_maestro = null
 var modulate_node  = null
 var tween = null
 var respawn_timer = null
@@ -27,6 +30,10 @@ func _ready():
 	
 	camera_crew = CameraCrew.instance()
 	add_child(camera_crew)
+
+	music_maestro = Maestro.instance()
+	add_child(music_maestro)
+	music_maestro.play_steal_the_thief()
 
 	if has_node("towers"):
 		var towers = $towers.get_children()

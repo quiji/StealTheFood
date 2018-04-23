@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/StealTheThief.wav-a6cb3baba5e12978a3548235f3b1315d.sample"
+
+[deps]
+
+source_file="res://_asset_builder/Music/StealTheThief.wav"
+source_md5="8e5e0d19b7a9283eea7a4d297196c13c"
+
+dest_files=[ "res://.import/StealTheThief.wav-a6cb3baba5e12978a3548235f3b1315d.sample" ]
+dest_md5="2c625bee2581461016305329a129c126"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

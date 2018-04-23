@@ -24,3 +24,10 @@ func is_bullet_too_far(pos):
 
 func at_spawn_point():
 	get_tree().current_scene.spawn_raccoon()
+
+func enemy_pilot_failed():
+	return get_tree().current_scene.enemy_pilot_failed()
+
+func raccoon_failed():
+	return get_tree().current_scene.raccoon_failed()
+

@@ -1,26 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://bullets/bullet.gd" type="Script" id=1]
 [ext_resource path="res://bullets/gen_bullet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/bullet_light.png" type="Texture" id=3]
-[ext_resource path="res://assets/Shoot.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/plane_hit.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/ground_hit.wav" type="AudioStream" id=6]
-
-[sub_resource type="AudioStreamRandomPitch" id=1]
-
-audio_stream = ExtResource( 4 )
-random_pitch = 1.06
-
-[sub_resource type="AudioStreamRandomPitch" id=2]
-
-audio_stream = ExtResource( 5 )
-random_pitch = 1.1
-
-[sub_resource type="AudioStreamRandomPitch" id=3]
-
-audio_stream = ExtResource( 6 )
-random_pitch = 1.06
+[ext_resource path="res://sound/bullet_sounds.tscn" type="PackedScene" id=4]
 
 [node name="bullet" type="KinematicBody2D"]
 
@@ -62,38 +45,6 @@ shadow_item_cull_mask = 1
 build_mode = 0
 polygon = PoolVector2Array( 1, -1.75, 5.75, -1.75, 5.75, 1.5, 1, 1.75 )
 
-[node name="shoot" type="AudioStreamPlayer2D" parent="." index="3"]
-
-stream = SubResource( 1 )
-volume_db = -10.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "SFX"
-area_mask = 1
-
-[node name="metal_hit" type="AudioStreamPlayer2D" parent="." index="4"]
-
-stream = SubResource( 2 )
-volume_db = -10.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "SFX"
-area_mask = 1
-
-[node name="ground_hit" type="AudioStreamPlayer2D" parent="." index="5"]
-
-stream = SubResource( 3 )
-volume_db = -10.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "SFX"
-area_mask = 1
-
-[connection signal="finished" from="metal_hit" to="." method="_on_metal_hit_finished"]
-
-[connection signal="finished" from="ground_hit" to="." method="_on_ground_hit_finished"]
+[node name="sounds" parent="." index="3" instance=ExtResource( 4 )]
 
 

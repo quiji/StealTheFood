@@ -56,6 +56,8 @@ found_duration = 1.7
 
 [node name="obstacles" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="mountain" parent="obstacles" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 62, -318 )
@@ -69,6 +71,8 @@ position = Vector2( 108, -254 )
 position = Vector2( -4, -362 )
 
 [node name="indicators" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="light_target" parent="indicators" index="0" instance=ExtResource( 5 )]
 

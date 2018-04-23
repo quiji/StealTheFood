@@ -14,7 +14,7 @@ random_pitch = 1.1
 audio_stream = ExtResource( 3 )
 random_pitch = 1.05
 
-[node name="plane_sounds" type="Node2D"]
+[node name="plane_sounds" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -40,7 +40,7 @@ playback/speed = 1.0
 [node name="crash" type="AudioStreamPlayer2D" parent="." index="2"]
 
 stream = SubResource( 2 )
-volume_db = -5.0
+volume_db = 0.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0

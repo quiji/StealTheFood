@@ -73,7 +73,7 @@ func set_mode(new_mode):
 
 		emit_signal("found_something")
 
-		$found.play()
+		$sounds.play_discovered()
 
 		$circle_light.enabled = true
 		$tower_notices.show()
@@ -95,7 +95,8 @@ func set_mode(new_mode):
 		$circle_light.enabled = false
 		$tower_notices.hide()
 
-		$is_nothing.play()
+		$sounds.play_is_nothing()
+
 
 		$light_source.sweep_mode()
 		if target != null:
