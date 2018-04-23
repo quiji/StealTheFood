@@ -3,9 +3,9 @@
 [ext_resource path="res://classes/Stage.gd" type="Script" id=1]
 [ext_resource path="res://assets/tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://characters/tower/tower.tscn" type="PackedScene" id=3]
-[ext_resource path="res://characters/raccoon/raccoon.tscn" type="PackedScene" id=4]
-[ext_resource path="res://obstacles/mountain.tscn" type="PackedScene" id=5]
-[ext_resource path="res://tools/light_target.tscn" type="PackedScene" id=6]
+[ext_resource path="res://obstacles/mountain.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tools/light_target.tscn" type="PackedScene" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=6]
 
 [node name="game" type="Node2D"]
 
@@ -44,36 +44,45 @@ editor/display_folded = true
 
 position = Vector2( -118, -128 )
 guard_target = NodePath("../../indicators/light_target")
+sweep_duration = 4.5
+found_duration = 1.7
 
 [node name="tower2" parent="towers" index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 404, -4 )
 guard_target = NodePath("../../indicators/light_target2")
+sweep_duration = 4.5
+found_duration = 1.7
 
-[node name="raccoon" parent="." index="2" instance=ExtResource( 4 )]
+[node name="obstacles" type="Node2D" parent="." index="2"]
 
-[node name="mountain" parent="." index="3" instance=ExtResource( 5 )]
+[node name="mountain" parent="obstacles" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 62, -318 )
 
-[node name="mountain2" parent="." index="4" instance=ExtResource( 5 )]
+[node name="mountain2" parent="obstacles" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 108, -254 )
 
-[node name="mountain3" parent="." index="5" instance=ExtResource( 5 )]
+[node name="mountain3" parent="obstacles" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( -4, -362 )
 
-[node name="indicators" type="Node2D" parent="." index="6"]
+[node name="indicators" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
-
-[node name="light_target" parent="indicators" index="0" instance=ExtResource( 6 )]
+[node name="light_target" parent="indicators" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( -130, -356 )
 
-[node name="light_target2" parent="indicators" index="1" instance=ExtResource( 6 )]
+[node name="light_target2" parent="indicators" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 270, 168 )
+
+[node name="spawn_point" type="Sprite" parent="indicators" index="2"]
+
+modulate = Color( 0.890625, 0.0661011, 0.0661011, 1 )
+position = Vector2( -50, 378 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
 
 

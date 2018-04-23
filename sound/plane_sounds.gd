@@ -9,6 +9,9 @@ func _ready():
 	$tween.start()
 
 
+func set_engine_sound_bus(bus_name):
+	$engine.bus = bus_name
+
 func play_crash():
 	$crash.play()
 

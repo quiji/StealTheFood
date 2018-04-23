@@ -3,11 +3,9 @@ extends "res://classes/Pilot.gd"
 
 
 
-func _ready():
-	stats.top_speed = 200
-	stats.camera_points = 1
-
-
+func configure():
+	stats.top_speed = 270
+	stats.lives = 500
 
 
 func process_ai(delta):
@@ -24,3 +22,5 @@ func process_ai(delta):
 	if Input.is_action_pressed("shoot"):
 		shoot_bullet()
 
+func pilot_failed():
+	get_parent().raccoon_failed()

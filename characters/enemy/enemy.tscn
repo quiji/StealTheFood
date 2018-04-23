@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://characters/enemy/enemy.gd" type="Script" id=1]
-[ext_resource path="res://characters/enemy/gen_enemy_plane.tscn" type="PackedScene" id=2]
-[ext_resource path="res://characters/enemy/gen_enemy_propeller.tscn" type="PackedScene" id=3]
-[ext_resource path="res://sparks/shoot_light.tscn" type="PackedScene" id=4]
-[ext_resource path="res://sound/plane_sounds.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sparks/plane_smoke.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/enemy/gen_enemy_plane.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/enemy/gen_enemy_propeller.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sparks/shoot_light.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sound/plane_sounds.tscn" type="PackedScene" id=6]
 
-[node name="enemy" type="KinematicBody2D"]
+[node name="enemy" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -15,26 +16,59 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
 
-[node name="sprite" parent="." index="0" instance=ExtResource( 2 )]
+[node name="plane_smoke" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 19, 10 )
+emitting = false
+amount = 20
+
+[node name="sprite" parent="." index="1" instance=ExtResource( 3 )]
 
 rotation = 1.5708
 _sections_unfolded = [ "Transform" ]
 
-[node name="propeller" parent="." index="1" instance=ExtResource( 3 )]
+[node name="propeller" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 35, 0 )
 rotation = 1.5708
 _sections_unfolded = [ "Transform" ]
 
-[node name="collision" type="CollisionPolygon2D" parent="." index="2"]
+[node name="collision" type="CollisionPolygon2D" parent="." index="3"]
 
 build_mode = 0
 polygon = PoolVector2Array( 16, -8, 32, -8, 32, 8, 16, 8, 15, 36, -5, 36, -3, 8, -33, 4, -33, -3, -1, -7, -4, -35, 15, -35 )
 
-[node name="shoot_light" parent="." index="3" instance=ExtResource( 4 )]
+[node name="shoot_light" parent="." index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 39, -28 )
 
-[node name="plane_sounds" parent="." index="4" instance=ExtResource( 5 )]
+[node name="plane_sounds" parent="." index="5" instance=ExtResource( 6 )]
+
+[node name="survival_ray" type="RayCast2D" parent="." index="6"]
+
+position = Vector2( 40, 0 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 180, 0 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="survival_ray_left" type="RayCast2D" parent="." index="7"]
+
+position = Vector2( 15, -33 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 100, -80 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="survival_ray_right" type="RayCast2D" parent="." index="8"]
+
+position = Vector2( 16, 34 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 100, 80 )
+collision_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 

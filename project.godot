@@ -11,7 +11,7 @@ config_version=3
 [Project]
 
 patch=0
-minor=4
+minor=8
 
 [application]
 
@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Glb="*res://classes/Glb.gd"
 Smoothstep="*res://classes/Smoothstep.gd"
 Console="*res://addons/quijipixel.console/Console.tscn"
 
@@ -61,6 +62,8 @@ texture={
 toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"unicode":0,"echo":false,"script":null)
  ]
 shoot=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
+call_air_force=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
  ]
 
 [layer_names]

@@ -95,9 +95,7 @@
         "minute": 58,
         "second": 23
       }
-    }
-  },
-  "pending": {
+    },
     "task.0": {
       "task": "Enemy Pilots AI",
       "type": "Task",
@@ -110,6 +108,16 @@
         "hour": 16,
         "minute": 47,
         "second": 21
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 17,
+        "minute": 9,
+        "second": 45
       }
     },
     "task.2": {
@@ -124,8 +132,68 @@
         "hour": 16,
         "minute": 47,
         "second": 44
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 17,
+        "minute": 49,
+        "second": 49
       }
     },
+    "task.6": {
+      "task": "Damage",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 21,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 48,
+        "second": 54
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 18,
+        "minute": 4,
+        "second": 35
+      }
+    },
+    "task.16": {
+      "task": "Smooth camera transitions between points",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 14,
+        "minute": 17,
+        "second": 0
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 56,
+        "second": 5
+      }
+    }
+  },
+  "pending": {
     "task.3": {
       "task": "Food items",
       "type": "Task",
@@ -152,20 +220,6 @@
         "hour": 16,
         "minute": 48,
         "second": 2
-      }
-    },
-    "task.6": {
-      "task": "Damage",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 4,
-        "day": 21,
-        "weekday": 6,
-        "dst": false,
-        "hour": 16,
-        "minute": 48,
-        "second": 54
       }
     },
     "task.7": {
@@ -265,26 +319,42 @@
         "minute": 58,
         "second": 27
       }
+    },
+    "task.17": {
+      "task": "Plane upgrades after the mission??",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 56,
+        "second": 20
+      }
     }
   },
   "comp_order": [
     "task.1",
     "task.5",
     "task.10",
-    "task.9"
-  ],
-  "pend_order": [
+    "task.9",
     "task.0",
     "task.2",
+    "task.6",
+    "task.16"
+  ],
+  "pend_order": [
     "task.3",
     "task.4",
-    "task.6",
     "task.7",
     "task.8",
     "task.11",
     "task.12",
     "task.13",
     "task.14",
-    "task.15"
+    "task.15",
+    "task.17"
   ]
 }

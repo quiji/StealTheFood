@@ -6,8 +6,8 @@ var ShootSpark = preload("res://sparks/shoot_light.tscn")
 
 var stats = {
 	top_speed = 180,
-	camera_points = 1,
-	shoot_burst = 0.18
+	shoot_burst = 0.18,
+	lives = 3,
 }
 
 const BULLET_SPOT_DISTANCE = 40
@@ -21,11 +21,9 @@ var velocity = Vector2(-1, 0)
 var shoot_burst_time = -1
 
 var destroyed = false
+var lives = 0
 
 func _ready():
-	add_to_group("FlyingFellas")
-	velocity *= stats.top_speed
-
 	if has_node("propeller"):
 		$propeller/anim_player.play("Propel")
 
@@ -33,9 +31,20 @@ func _ready():
 		$sprite/anim_player.play("Flying")
 		$sprite/anim_player.connect("animation_finished", self, "on_animation_finished")
 
+	configure()
+
+	velocity *= stats.top_speed
+	lives = stats.lives
+
+
+func configure():
+	pass
+
 func process_ai(delta):
 	pass
 	
+func pilot_failed():
+	pass
 	
 func _physics_process(delta):
 	if not destroyed:
@@ -53,8 +62,9 @@ func _physics_process(delta):
 
 	rotation = direction.angle()
 	
-	if collision_data != null and collision_data.collider.has_method("plane_destroyed"):
-		collision_data.collider.plane_destroyed()
+	if collision_data != null and (collision_data.collider.has_method("plane_destroyed") or collision_data.collider.is_class("StaticBody2D")):
+		if collision_data.collider.has_method("plane_destroyed"):
+			collision_data.collider.plane_destroyed()
 		plane_destroyed()
 		direction = collision_data.normal
 
@@ -74,7 +84,7 @@ func plane_destroyed():
 		destroyed = true
 
 func get_camera_values():
-	return { pos = position, camera_points = stats.camera_points }
+	return { pos = position}
 
 func on_animation_finished(anim_name):
 	if anim_name == "Blasted":
@@ -83,6 +93,8 @@ func on_animation_finished(anim_name):
 
 		get_parent().add_child(explosion_particle)
 		explosion_particle.emitting = true
+		
+		pilot_failed()
 		queue_free()
 
 func shoot_bullet():
@@ -97,3 +109,13 @@ func shoot_bullet():
 		bullet.shoot(direction)
 		shoot_burst_time = stats.shoot_burst
 
+func receive_bullet_damage():
+	lives -= 1
+	if lives == 2:
+		$plane_smoke.emitting = true
+		$plane_smoke.amount = 10
+	elif lives == 1:
+		$plane_smoke.emitting = true
+		$plane_smoke.amount = 200
+	elif lives <= 0:
+		plane_destroyed()

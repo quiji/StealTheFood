@@ -1,15 +1,22 @@
 extends Sprite
 
+var Bullet = preload("res://bullets/bullet.tscn")
+var ShootSpark = preload("res://sparks/shoot_light.tscn")
+
+
 enum TowerMode {SWEEP_MODE, FOUND_MODE, ALERT_MODE, COOLDOWN_MODE, BACK_TO_DUTY_MODE}
 
 signal raccoon_sighted
 signal found_something
 
 export (NodePath) var guard_target
-export (float) var sweep_duration = 5.0
+export (float) var sweep_duration = 4.5
 export (float) var back_to_duty_duration = 2.0
 export (float) var cooldown_duration = 2.0
-export (float) var found_duration = 2.0
+export (float) var found_duration = 1.7
+export (float) var shoot_burst = 0.25
+
+const ATTACK_DISTANCE = 200 * 200
 
 var target = null
 var target_end_angle = null
@@ -25,6 +32,10 @@ var raccoon = null
 var found_timer = 0
 var cooldown_timer = 0
 var mode
+
+var shoot_burst_time = -1
+
+var attack = false
 
 func _ready():
 	
@@ -50,6 +61,7 @@ func set_mode(new_mode):
 		$light_source.alert_mode()
 
 		$circle_light.enabled = true
+
 		$tower_notices.show()
 		$tower_notices/anim_player.play("Alert")
 
@@ -92,25 +104,40 @@ func set_mode(new_mode):
 			t = 0
 
 func pause_towering():
-	set_physics_process(false)
+	attack = true
 	
 	$circle_light.enabled = true
 	$tower_notices.show()
 	$tower_notices/anim_player.play("Alert")
-	
+	$anim_player.play("Alarm")
 	$light_source.hide()
 
 func continue_towering():
-	set_physics_process(true)
+	attack = false
 
 	$circle_light.enabled = false
 	$tower_notices.hide()
 	$light_source.show()
-	
+	$anim_player.stop()
 	set_mode(BACK_TO_DUTY_MODE)
 
 
 func _physics_process(delta):
+
+	if shoot_burst_time >= 0:
+		shoot_burst_time -= delta
+
+
+	if attack:
+		var target = Glb.get_raccoon()
+		if target != null:
+			var target_vector = (target.position - position)
+			var raccoon_direction = target_vector.normalized()
+			var raccoon_distance_squared = target_vector.length_squared()
+			if raccoon_distance_squared <= ATTACK_DISTANCE:
+				shoot_bullet(raccoon_direction)
+
+		return
 
 	var raccoon_found = false
 	if raccoon != null:
@@ -164,3 +191,14 @@ func _physics_process(delta):
 			$light_source.rotation = lerp(back_to_duty_start_angle, back_to_duty_target_angle, Smoothstep.cross(t, Smoothstep.start3(t), Smoothstep.stop3(t)))
 
 	
+func shoot_bullet(target_direction):
+	if shoot_burst_time < 0:
+		var spark = ShootSpark.instance()
+		var bullet = Bullet.instance()
+		var random_pos_factor = rand_range(-8, 8)
+		bullet.position = position + target_direction + target_direction.tangent() * random_pos_factor
+		spark.position = Vector2(1, 0) + Vector2(1, 0).tangent() * random_pos_factor
+		add_child(spark)
+		get_parent().add_child(bullet)
+		bullet.shoot(target_direction)
+		shoot_burst_time = shoot_burst
