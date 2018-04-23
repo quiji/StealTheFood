@@ -1,15 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sound/maestro.gd" type="Script" id=1]
 [ext_resource path="res://assets/StealTheThief.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assets/RookieRaccoon.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/RookieRaccoonIntro.ogg" type="AudioStream" id=4]
 
-[node name="maestro" type="Node2D"]
+[node name="maestro" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
 [node name="steal_the_thief" type="AudioStreamPlayer" parent="." index="0"]
 
 stream = ExtResource( 2 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+
+[node name="rookie_raccoon" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+
+[node name="rookie_raccoon_intro" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0

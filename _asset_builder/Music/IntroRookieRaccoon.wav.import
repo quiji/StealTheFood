@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/IntroRookieRaccoon.wav-21e0a3981c976092a68eb92aeed471e0.sample"
+
+[deps]
+
+source_file="res://_asset_builder/Music/IntroRookieRaccoon.wav"
+source_md5="5e9d73881928190b16401c6fb4b9ae11"
+
+dest_files=[ "res://.import/IntroRookieRaccoon.wav-21e0a3981c976092a68eb92aeed471e0.sample" ]
+dest_md5="694ac65a80d857e5570010e6b2c1aa45"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

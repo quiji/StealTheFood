@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RookieRaccoon.ogg-251dab2506cf6b887c7e695174a82fd3.oggstr"
+
+[deps]
+
+source_file="res://assets/RookieRaccoon.ogg"
+source_md5="47fdf824eafdfd7735fa6674d5bc8b7f"
+
+dest_files=[ "res://.import/RookieRaccoon.ogg-251dab2506cf6b887c7e695174a82fd3.oggstr" ]
+dest_md5="fe36e3a70f669bd5ff37ccfbd2433ec6"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -47,6 +47,8 @@ func _ready():
 
 func back_to_normal():
 	
+	music_maestro.transition_rookie_thief()
+	
 	tween.interpolate_property(modulate_node, "color", modulate_node.color, Color("#656565"), 0.25, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	tween.start()
 
@@ -60,6 +62,8 @@ func is_bullet_too_far(pos):
 	return (pos - camera_crew.position).length_squared() > 1500 * 1500
 
 func alert_mode_on():
+	music_maestro.transition_thief_rookie()
+	
 	tween.interpolate_property(modulate_node, "color", modulate_node.color, Color("#AAAAAA"), 0.25, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	tween.start()
 	
