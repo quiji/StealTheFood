@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pickup_Coin.wav-a3aaf77de9272404fbf1bfad19485605.sample"
+
+[deps]
+
+source_file="res://_asset_builder/apple/Pickup_Coin.wav"
+source_md5="d65ea83b49dec3a7d271fa721622aa86"
+
+dest_files=[ "res://.import/Pickup_Coin.wav-a3aaf77de9272404fbf1bfad19485605.sample" ]
+dest_md5="581bbc1cac15bc2cd97b70d39e7234ef"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/enemy_signal.wav-9b779daf895447a2e2a8c329a3a42c0d.sample"
+
+[deps]
+
+source_file="res://assets/enemy_signal.wav"
+source_md5="9cb992a7e45ea576fd44db38f037de8e"
+
+dest_files=[ "res://.import/enemy_signal.wav-9b779daf895447a2e2a8c329a3a42c0d.sample" ]
+dest_md5="2994fee424723ccebb508747c9a64f82"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/apple.wav-2651037ffdc4bac79e13debee95efec6.sample"
+
+[deps]
+
+source_file="res://assets/apple.wav"
+source_md5="5ec5b63666a313190ffbc08d7beb57b9"
+
+dest_files=[ "res://.import/apple.wav-2651037ffdc4bac79e13debee95efec6.sample" ]
+dest_md5="8b97d5550565962f1a17f23f6833d37a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

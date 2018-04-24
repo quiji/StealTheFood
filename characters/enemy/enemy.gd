@@ -14,12 +14,12 @@ const WEAK_MINIMUM_DISTANTE_TO_TARGET = 200
 #Medium Stats
 const MEDIUM_MINIMUM_DISTANCE_TO_REGROUP = 600
 const MEDIUM_MAXIMUM_DISTANCE_TO_ATTACK = 450
-const MEDIUM_MINIMUM_DISTANTE_TO_TARGET = 200
+const MEDIUM_MINIMUM_DISTANTE_TO_TARGET = 250
 
 # Strong Stats
 const STRONG_MINIMUM_DISTANCE_TO_REGROUP = 300
 const STRONG_MAXIMUM_DISTANCE_TO_ATTACK = 500
-const STRONG_MINIMUM_DISTANTE_TO_TARGET = 200
+const STRONG_MINIMUM_DISTANTE_TO_TARGET = 250
 
 
 var REGROUP_DISTANCE = 0
@@ -85,10 +85,6 @@ func process_ai(delta):
 			survival_state = NO_DANGER
 			action_state = REGROUP
 
-	if survival_state == THREAT_AHEAD:
-		Console.add_log("survival", "THREAT")
-	else:
-		Console.add_log("survival", "NO")
 
 	var target = Glb.get_raccoon()
 

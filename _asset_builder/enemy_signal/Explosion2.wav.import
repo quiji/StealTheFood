@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosion2.wav-46ed4b19995d77f6d87d1a0da936a933.sample"
+
+[deps]
+
+source_file="res://_asset_builder/enemy_signal/Explosion2.wav"
+source_md5="814fe5a2ecaf583c7d80d63155d6e9bf"
+
+dest_files=[ "res://.import/Explosion2.wav-46ed4b19995d77f6d87d1a0da936a933.sample" ]
+dest_md5="8eb2073f45c52a1212516e9f6d7bd841"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

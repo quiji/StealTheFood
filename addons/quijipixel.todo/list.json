@@ -191,6 +191,102 @@
         "minute": 56,
         "second": 5
       }
+    },
+    "task.19": {
+      "task": "Indicator show planes even when there are none. When planes collide indicator doesn't get the numbers right",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 14,
+        "minute": 2,
+        "second": 1
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 31,
+        "second": 28
+      }
+    },
+    "task.21": {
+      "task": "Armor indicator",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 15,
+        "minute": 31,
+        "second": 43
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 31,
+        "second": 32
+      }
+    },
+    "task.15": {
+      "task": "Music",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 22,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 58,
+        "second": 27
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 31,
+        "second": 38
+      }
+    },
+    "task.24": {
+      "task": "Pause menu to get out.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 33,
+        "second": 54
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 23,
+        "second": 39
+      }
     }
   },
   "pending": {
@@ -306,20 +402,6 @@
         "second": 55
       }
     },
-    "task.15": {
-      "task": "Music",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 4,
-        "day": 22,
-        "weekday": 0,
-        "dst": false,
-        "hour": 13,
-        "minute": 58,
-        "second": 27
-      }
-    },
     "task.17": {
       "task": "Plane upgrades after the mission??",
       "type": "Task",
@@ -333,6 +415,62 @@
         "minute": 56,
         "second": 20
       }
+    },
+    "task.18": {
+      "task": "Make planes spawn in formation",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 13,
+        "minute": 46,
+        "second": 24
+      }
+    },
+    "task.20": {
+      "task": "HARD TURN, must be there",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 14,
+        "minute": 9,
+        "second": 33
+      }
+    },
+    "task.22": {
+      "task": "Improve plane crash animation with rolling",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 33,
+        "second": 28
+      }
+    },
+    "task.23": {
+      "task": "Improve stuff by adding shadows to planes",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 33,
+        "second": 40
+      }
     }
   },
   "comp_order": [
@@ -343,7 +481,11 @@
     "task.0",
     "task.2",
     "task.6",
-    "task.16"
+    "task.16",
+    "task.19",
+    "task.21",
+    "task.15",
+    "task.24"
   ],
   "pend_order": [
     "task.3",
@@ -354,7 +496,10 @@
     "task.12",
     "task.13",
     "task.14",
-    "task.15",
-    "task.17"
+    "task.17",
+    "task.18",
+    "task.20",
+    "task.22",
+    "task.23"
   ]
 }

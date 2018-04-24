@@ -7,10 +7,11 @@ var ShootSpark = preload("res://sparks/shoot_light.tscn")
 var stats = {
 	top_speed = 180,
 	shoot_burst = 0.18,
-	lives = 3,
+	armor = 3,
 }
 
 const BULLET_SPOT_DISTANCE = 40
+const COLLISION_INMUNITY_DURATION = 0.15
 
 enum MOVE_DIRECTIONS {MOVE_LEFT, MOVE_RIGHT}
 
@@ -21,7 +22,8 @@ var velocity = Vector2(-1, 0)
 var shoot_burst_time = -1
 
 var destroyed = false
-var lives = 0
+var armor = 0
+var collision_inmunity = null
 
 func _ready():
 	if has_node("propeller"):
@@ -34,7 +36,7 @@ func _ready():
 	configure()
 
 	velocity *= stats.top_speed
-	lives = stats.lives
+	armor = stats.armor
 
 
 func configure():
@@ -45,6 +47,10 @@ func process_ai(delta):
 	
 func pilot_failed():
 	pass
+	
+func on_damage_received(n):
+	pass
+
 	
 func _physics_process(delta):
 	if not destroyed:
@@ -62,25 +68,37 @@ func _physics_process(delta):
 
 	rotation = direction.angle()
 	
-	if collision_data != null and (collision_data.collider.has_method("plane_destroyed") or collision_data.collider.is_class("StaticBody2D")):
-		if collision_data.collider.has_method("plane_destroyed"):
-			collision_data.collider.plane_destroyed()
-		plane_destroyed()
+	if collision_data != null and (collision_data.collider.has_method("plane_destroyed") or collision_data.collider.is_class("StaticBody2D")) and collision_inmunity == null:
+		collision_inmunity = COLLISION_INMUNITY_DURATION
+		#plane_destroyed()
+		$plane_sounds.play_crash()
+		receive_collision_damage()
 		direction = collision_data.normal
 
 	if shoot_burst_time >= 0:
 		shoot_burst_time -= delta
+	
+	if collision_inmunity != null:
+		collision_inmunity -= delta
+		if collision_inmunity < 0:
+			collision_inmunity = null
+
+
 
 func plane_destroyed():
 	if not destroyed:
 		
 		$plane_sounds.play_crash()
 		
+		collision_mask = 0
+		collision_layer = 0
+		
 		if has_node("propeller"):
 			$propeller.hide()
 			
 		if has_node("sprite"):
 			$sprite/anim_player.play("Blasted")
+
 		destroyed = true
 
 func get_camera_values():
@@ -93,7 +111,6 @@ func on_animation_finished(anim_name):
 
 		get_parent().add_child(explosion_particle)
 		explosion_particle.emitting = true
-		
 		pilot_failed()
 		queue_free()
 
@@ -110,12 +127,22 @@ func shoot_bullet():
 		shoot_burst_time = stats.shoot_burst
 
 func receive_bullet_damage():
-	lives -= 1
-	if lives == 2:
+	armor -= 1
+	on_damage_received(1)
+	review_armor_damage()
+
+func receive_collision_damage():
+	armor -= 2
+	on_damage_received(2)
+	review_armor_damage()
+
+func review_armor_damage():
+	if armor == 2 and stats.armor > 2:
 		$plane_smoke.emitting = true
 		$plane_smoke.amount = 10
-	elif lives == 1:
+	elif armor == 1:
 		$plane_smoke.emitting = true
 		$plane_smoke.amount = 200
-	elif lives <= 0:
+	elif armor <= 0:
 		plane_destroyed()
+	

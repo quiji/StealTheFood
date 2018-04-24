@@ -2,4 +2,4 @@ extends Position2D
 
 
 func _ready():
-	$sprite.hide()
+	$sprite.queue_free()

@@ -7,10 +7,7 @@ func _ready():
 
 
 func get_raccoon():
-	if get_tree().current_scene.has_node("raccoon"):
-		return get_tree().current_scene.get_node("raccoon")
-	else:
-		return null
+	return get_tree().current_scene.get_raccoon()
 
 
 func get_racoon_spawn_point():
@@ -30,4 +27,32 @@ func enemy_pilot_failed():
 
 func raccoon_failed():
 	return get_tree().current_scene.raccoon_failed()
+
+func set_shields(n):
+	get_tree().current_scene.set_shields(n)
+
+func add_shields(n):
+	get_tree().current_scene.add_shields(n)
+
+func remove_shields(n):
+	get_tree().current_scene.remove_shields(n)
+
+func apple_eaten():
+	get_tree().current_scene.apple_eaten()
+
+
+
+############################################################################################################
+#
+#   Game Data
+#
+############################################################################################################
+
+var apple_count = 0
+var raccoon_lives = 3
+
+func get_raccoon_lives():
+	return raccoon_lives
+
+
 

@@ -9,7 +9,7 @@
 [node name="raccoon" type="KinematicBody2D"]
 
 input_pickable = false
-collision_layer = 7
+collision_layer = 15
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
@@ -17,6 +17,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="plane_smoke" parent="." index="0" instance=ExtResource( 2 )]
 
+visible = false
 position = Vector2( 20, 13 )
 emitting = false
 amount = 20
@@ -34,9 +35,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="collision" type="CollisionPolygon2D" parent="." index="3"]
 
+visible = false
 build_mode = 0
-polygon = PoolVector2Array( 16, -8, 32, -8, 32, 8, 16, 8, 15, 36, -5, 36, -3, 8, -33, 4, -33, -3, -1, -7, -4, -35, 15, -35 )
+polygon = PoolVector2Array( 16, -8, 30, -7, 30, 7, 16, 8, 13, 31, -2, 32, -3, 8, -30, 3, -31, -3, -1, -7, -3, -31, 13, -31 )
 
 [node name="plane_sounds" parent="." index="4" instance=ExtResource( 5 )]
+
+visible = false
 
 

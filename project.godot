@@ -10,31 +10,32 @@ config_version=3
 
 [Project]
 
-patch=0
-minor=8
+patch=1
+minor=11
 
 [application]
 
-config/name="Steal The Food"
-run/main_scene="res://game.tscn"
-config/icon="res://icon.png"
+config/name="Rookie Raccoon"
+run/main_scene="res://title_screen.tscn"
+boot_splash/image="res://assets/splash_screen.png"
+config/icon="res://assets/icon.png"
 
 [autoload]
 
 Glb="*res://classes/Glb.gd"
 Smoothstep="*res://classes/Smoothstep.gd"
-Console="*res://addons/quijipixel.console/Console.tscn"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
+window/size/fullscreen=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "quijipixel.console", "quijipixel.generator", "quijipixel.notes", "quijipixel.todo" )
+enabled=PoolStringArray( "quijipixel.generator", "quijipixel.notes", "quijipixel.todo" )
 
 [importer_defaults]
 
@@ -59,8 +60,6 @@ texture={
 
 [input]
 
-toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"unicode":0,"echo":false,"script":null)
- ]
 shoot=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
  ]
 call_air_force=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
@@ -71,6 +70,7 @@ call_air_force=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_
 2d_physics/layer_1="Plane"
 2d_physics/layer_2="Detectable"
 2d_physics/layer_3="TowerSighted"
+2d_physics/layer_4="Fruit"
 
 [rendering]
 

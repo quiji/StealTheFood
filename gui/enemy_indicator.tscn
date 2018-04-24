@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://gui/enemy_indicator.gd" type="Script" id=1]
+[ext_resource path="res://assets/enemy_indicator.png" type="Texture" id=2]
+[ext_resource path="res://sound/enemy_signal_sounds.tscn" type="PackedScene" id=3]
+
+[node name="enemy_indicator" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="demo" type="Sprite" parent="." index="0"]
+
+visible = false
+texture = ExtResource( 2 )
+hframes = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="show_planes" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 0.15
+one_shot = true
+autostart = false
+
+[node name="planes" type="Node2D" parent="." index="2"]
+
+[node name="sounds" parent="." index="3" instance=ExtResource( 3 )]
+
+[node name="tween" type="Tween" parent="." index="4"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="timeout" from="show_planes" to="." method="_on_show_timeout"]
+
+

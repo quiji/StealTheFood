@@ -1,5 +1,7 @@
 extends Node2D
 
+var rookie_valid_intro = false
+
 func _ready():
 	$rookie_raccoon_intro.connect("finished", self, "on_rookie_intro_finished")
 
@@ -7,18 +9,24 @@ func play_steal_the_thief():
 	$steal_the_thief.play()
 	
 func on_rookie_intro_finished():
-	$rookie_raccoon.play()
+	if rookie_valid_intro:
+		$rookie_raccoon.play()
+		rookie_valid_intro = false
+	
+func stop_steal_the_thief():
+	$steal_the_thief.stop()
+	
+func play_rookie_raccoon():
+	$rookie_raccoon_intro.play()
+	rookie_valid_intro = true
+
+func stop_rookie_raccoon():
+	rookie_valid_intro = false
+	$rookie_raccoon_intro.stop()
+	$rookie_raccoon.stop()
 	
 
-func transition_thief_rookie():
-	$steal_the_thief.stop()
-	$rookie_raccoon_intro.play()
-
-func transition_rookie_thief():
-	if $rookie_raccoon_intro.playing:
-		$rookie_raccoon_intro.stop()
-	else:
-		$rookie_raccoon.stop()
+func resume_steal_the_thief():
 	$steal_the_thief.play(44.937)
 
 	

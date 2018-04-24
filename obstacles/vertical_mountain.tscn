@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/side_mountains.png" type="Texture" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -6, -130, 2, -145, 10, -145, 15, -134, 34, -114, 36, -93, 30, -77, 34, -64, 36, -27, 41, -17, 31, 5, 23, 32, 29, 69, 37, 120, 14, 126, -8, 127, -24, 121, -20, 53, -33, 6, -37, -18, -23, -58, -25, -105, -14, -129 )
+
+[node name="vertical_mountain" type="StaticBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 35, -113, -25, -109, -22, -59, -30, -32, -37, -17, -29, 16, -20, 51, -22, 80, -25, 113, -23, 147, 8, 145, 40, 136, 34, 117, 28, 92, 29, 69, 23, 47, 21, 30, 29, 13, 27, -2, 38, -22, 34, -37, 34, -64, 30, -76, 35, -96 )
+
+[node name="occluder" type="LightOccluder2D" parent="." index="2"]
+
+occluder = SubResource( 1 )
+light_mask = 1
+
+
