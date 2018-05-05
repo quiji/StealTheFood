@@ -9,6 +9,18 @@
 Pixel Perfect Scaling thread:
 https://github.com/godotengine/godot/issues/6506
 
+
+> Game Notes (Improvements)
+-  Enemy AI
+- Make GUI enemy planes more obvious (maybe add an enemy word or something) as they might be misunderstood as lives.
+- Enemy spawn rate doesn't reset when apples do. Both should reset, i guess.
+- Optimize game (sometimes it gets slow)
+- Cloud parallax over and below (maybe 3 or 4 layers)
+- Maybe clouds could be used as cover for the towers. 
+- Modify tower to feel like they are searching on the sky (using a circle with cone perspective maybe?)
+- Cool typical plane maneuver
+
+
 > GIT
 
 download:

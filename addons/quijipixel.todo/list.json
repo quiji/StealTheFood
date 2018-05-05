@@ -287,6 +287,54 @@
         "minute": 23,
         "second": 39
       }
+    },
+    "task.23": {
+      "task": "Improve stuff by adding shadows to planes",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 33,
+        "second": 40
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 25,
+        "weekday": 3,
+        "dst": false,
+        "hour": 16,
+        "minute": 39,
+        "second": 58
+      }
+    },
+    "task.22": {
+      "task": "Improve plane crash animation with rolling",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 23,
+        "weekday": 1,
+        "dst": false,
+        "hour": 19,
+        "minute": 33,
+        "second": 28
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 5,
+        "day": 3,
+        "weekday": 4,
+        "dst": false,
+        "hour": 14,
+        "minute": 53,
+        "second": 45
+      }
     }
   },
   "pending": {
@@ -444,32 +492,88 @@
         "second": 33
       }
     },
-    "task.22": {
-      "task": "Improve plane crash animation with rolling",
+    "task.25": {
+      "task": "Blasted sound",
       "type": "Task",
       "creation_date": {
         "year": 2018,
-        "month": 4,
-        "day": 23,
-        "weekday": 1,
+        "month": 5,
+        "day": 2,
+        "weekday": 3,
         "dst": false,
-        "hour": 19,
-        "minute": 33,
-        "second": 28
+        "hour": 16,
+        "minute": 6,
+        "second": 26
       }
     },
-    "task.23": {
-      "task": "Improve stuff by adding shadows to planes",
+    "task.26": {
+      "task": "Falling sound",
       "type": "Task",
       "creation_date": {
         "year": 2018,
-        "month": 4,
-        "day": 23,
-        "weekday": 1,
+        "month": 5,
+        "day": 2,
+        "weekday": 3,
         "dst": false,
-        "hour": 19,
-        "minute": 33,
-        "second": 40
+        "hour": 16,
+        "minute": 6,
+        "second": 33
+      }
+    },
+    "task.27": {
+      "task": "Maybe remove borders, rethink that part.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 5,
+        "day": 2,
+        "weekday": 3,
+        "dst": false,
+        "hour": 16,
+        "minute": 6,
+        "second": 47
+      }
+    },
+    "task.28": {
+      "task": "Roll sideways mechanic",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 5,
+        "day": 3,
+        "weekday": 4,
+        "dst": false,
+        "hour": 14,
+        "minute": 53,
+        "second": 41
+      }
+    },
+    "task.29": {
+      "task": "Improve enemy AI",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 5,
+        "day": 3,
+        "weekday": 4,
+        "dst": false,
+        "hour": 14,
+        "minute": 54,
+        "second": 11
+      }
+    },
+    "task.30": {
+      "task": "Create stealth levels.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 5,
+        "day": 3,
+        "weekday": 4,
+        "dst": false,
+        "hour": 14,
+        "minute": 54,
+        "second": 26
       }
     }
   },
@@ -485,7 +589,9 @@
     "task.19",
     "task.21",
     "task.15",
-    "task.24"
+    "task.24",
+    "task.23",
+    "task.22"
   ],
   "pend_order": [
     "task.3",
@@ -499,7 +605,11 @@
     "task.17",
     "task.18",
     "task.20",
-    "task.22",
-    "task.23"
+    "task.25",
+    "task.26",
+    "task.27",
+    "task.28",
+    "task.29",
+    "task.30"
   ]
 }

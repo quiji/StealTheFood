@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RaccoonPlane.png-1034ed97975cd84d0b7e84d3e65a9dfc.stex"
+path="res://.import/cloud_01.png-1dc0eaa3535f8b1de32aa27583ee8262.stex"
 
 [deps]
 
-source_file="res://assets/RaccoonPlane.png"
-source_md5="380edd5d10d0d3a4803f3c31b85c5bdc"
+source_file="res://assets/cloud_01.png"
+source_md5="0ca59149a968425a872993ef6b97bbb2"
 
-dest_files=[ "res://.import/RaccoonPlane.png-1034ed97975cd84d0b7e84d3e65a9dfc.stex" ]
-dest_md5="29e46f4f7a8ebc67bdc659644b61d8a7"
+dest_files=[ "res://.import/cloud_01.png-1dc0eaa3535f8b1de32aa27583ee8262.stex" ]
+dest_md5="520608254c16ddf75aeca317f6c605cd"
 
 [params]
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://classes/CloudBase.gd" type="Script" id=1]
+
+[node name="CloudBase" type="Area2D"]
+
+self_modulate = Color( 1, 1, 1, 0.856353 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+collision_mask = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Visibility", "Z Index" ]
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array(  )
+
+

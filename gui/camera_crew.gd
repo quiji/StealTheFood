@@ -23,6 +23,9 @@ var t = null
 var start_speed = 0
 var end_speed = 0
 
+func _ready():
+	position = Glb.get_racoon_spawn_point()
+
 func _physics_process(delta):
 
 	var raccoon = Glb.get_raccoon()

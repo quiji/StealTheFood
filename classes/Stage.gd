@@ -4,9 +4,14 @@ var Gui = preload("res://gui/ingame_gui.tscn")
 var CameraCrew = preload("res://gui/camera_crew.tscn")
 var Maestro = preload("res://sound/maestro.tscn")
 var EnemyPlane = preload("res://characters/enemy/enemy.tscn")
+var Shadow = preload("res://sparks/plane_shadow.tscn")
+var PlaneExplosion = preload("res://sparks/explosion.tscn")
 var Raccoon = preload("res://characters/raccoon/raccoon.tscn")
 var Fruit = preload("res://collectables/fruit.tscn")
 
+enum GameModes {STEALTH, BATTLE_ROYALE}
+
+export (int, "Stealth", "BattleRoyale") var game_mode = STEALTH
 
 var camera_crew = null
 var music_maestro = null
@@ -22,6 +27,7 @@ var raccoon = null
 var enemy_planes = 0
 var apple_count = 0
 var apple = null
+
 
 func _ready():
 
@@ -43,7 +49,7 @@ func _ready():
 	
 	enemy_timer = Timer.new()
 	add_child(enemy_timer)
-	enemy_timer.wait_time = 0.8
+	enemy_timer.wait_time = 2.0
 	enemy_timer.one_shot = true
 	enemy_timer.connect("timeout", self, "enemy_spawn_moment")
 
@@ -60,11 +66,57 @@ func _ready():
 			towers[i].connect("found_something", self, "found_something")
 		i += 1
 
+	"""
+	var clouds = $clouds_high.get_children()
+	i = 0
+	while i < clouds.size():
+		clouds[i].set_height(180)
+
+		var shadow = Shadow.instance()
+		$shadows.add_child(shadow)
+		clouds[i].set_shadow(shadow)
+
+		i += 1
+
+	clouds = $clouds_medium.get_children()
+	i = 0
+	while i < clouds.size():
+		clouds[i].set_height(140)
+	
+		var shadow = Shadow.instance()
+		$shadows.add_child(shadow)
+		clouds[i].set_shadow(shadow)
+	
+	
+		i += 1
+
+	clouds = $clouds_low.get_children()
+	i = 0
+	while i < clouds.size():
+		clouds[i].set_height(100)
+		
+		var shadow = Shadow.instance()
+		$shadows.add_child(shadow)
+		clouds[i].set_shadow(shadow)
+
+		
+		i += 1
+	"""
+
 	alarm_count = 0
 
+	apple_count = 0
+	gui.update_score(apple_count, game_mode == BATTLE_ROYALE)
+
+
 	spawn_raccoon()
-	spawn_fruit()
 	
+	if game_mode == STEALTH:
+		spawn_fruit()
+	else:
+		alert_mode_on()
+
+
 
 func back_to_normal():
 	music_maestro.stop_rookie_raccoon()
@@ -80,11 +132,24 @@ func back_to_normal():
 	gui.change_mode(gui.INCOGNITO_MODE)
 
 
+func move_to_layer(plane, layer):
+	plane.get_parent().remove_child(plane)
+	match layer:
+		Glb.HIGH_LAYER:
+			$high_layer.add_child(plane)
+		Glb.MEDIUM_LAYER:
+			$medium_layer.add_child(plane)
+		Glb.LOW_LAYER:
+			$low_layer.add_child(plane)
+		_:
+			$low_layer.add_child(plane)
+
+
 func found_something():
 	pass
 
-func is_bullet_too_far(pos):
-	return (pos - camera_crew.position).length_squared() > 1500 * 1500
+func is_position_too_far(pos):
+	return (pos - camera_crew.position).length_squared() > 1280 * 1280
 
 func alert_mode_on():
 	alarm_count += 1
@@ -127,19 +192,35 @@ func spawn_enemies():
 	var enemy = EnemyPlane.instance()
 	enemy.position = $hangars/enemy_hangar.position
 	$battlefield.add_child(enemy)
-	
+
+	var shadow = Shadow.instance()
+	$shadows.add_child(shadow)
+	enemy.set_shadow(shadow)
+
+
 func spawn_raccoon():
+	var shadow = Shadow.instance()
+	$shadows.add_child(shadow)
+
 	raccoon = Raccoon.instance()
 	raccoon.position = $hangars/raccoon_hangar.position
 	$battlefield.add_child(raccoon)
+	raccoon.set_shadow(shadow)
 
+func plane_explosion_at(pos):
+	var explosion_particle = PlaneExplosion.instance()
+	explosion_particle.position = pos
+
+	$ground_layer.add_child(explosion_particle)
+	explosion_particle.emitting = true
 
 func spawn_fruit():
 	
-	var target_loc = randi() % $fruit_location.get_child_count()
-	var apple = Fruit.instance()
-	apple.position = $fruit_location.get_child(target_loc).position
-	$fruit_location.add_child(apple)
+	if $fruit_location.get_child_count() > 0:
+		var target_loc = randi() % $fruit_location.get_child_count()
+		var apple = Fruit.instance()
+		apple.position = $fruit_location.get_child(target_loc).position
+		$fruit_location.add_child(apple)
 
 func apple_eaten():
 	apple_count += 1
@@ -155,14 +236,22 @@ func get_racoon_spawn_point():
 
 func raccoon_failed():
 	apple_count = 0
-	gui.update_score(apple_count)
+	gui.update_score(apple_count, game_mode == BATTLE_ROYALE)
 	raccoon = null
 
 func enemy_pilot_failed():
 	var pilots = get_tree().get_nodes_in_group("EnemyPilots")
 	gui.buggie_down()
-	if pilots.size() == 0:
+	
+	if game_mode == BATTLE_ROYALE:
+		apple_count += 10
+		gui.update_score(apple_count, true)
+
+	if pilots.size() == 0 and game_mode == STEALTH:
 		back_to_normal()
+	elif pilots.size() == 0:
+		alert_mode_on()
+
 	
 
 func set_shields(n):

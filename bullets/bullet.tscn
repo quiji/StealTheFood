@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/bullet_light.png" type="Texture" id=3]
 [ext_resource path="res://sound/bullet_sounds.tscn" type="PackedScene" id=4]
 
-[node name="bullet" type="KinematicBody2D"]
+[node name="bullet" type="KinematicBody2D" index="0"]
 
 input_pickable = true
 collision_layer = 1
@@ -46,5 +46,9 @@ build_mode = 0
 polygon = PoolVector2Array( 1, -1.75, 5.75, -1.75, 5.75, 1.5, 1, 1.75 )
 
 [node name="sounds" parent="." index="3" instance=ExtResource( 4 )]
+
+[node name="on_screen" type="VisibilityNotifier2D" parent="." index="4"]
+
+rect = Rect2( -10, -10, 20, 20 )
 
 

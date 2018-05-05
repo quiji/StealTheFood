@@ -1,6 +1,8 @@
 extends Node
 
 
+enum AltitudeLayers {HIGH_LAYER, MEDIUM_LAYER, LOW_LAYER}
+
 func _ready():
 	randomize()
 
@@ -13,9 +15,9 @@ func get_raccoon():
 func get_racoon_spawn_point():
 	return get_tree().current_scene.get_racoon_spawn_point()
 
-func is_bullet_too_far(pos):
-	if get_tree().current_scene.has_method("is_bullet_too_far"):
-		return get_tree().current_scene.is_bullet_too_far(pos)
+func is_position_too_far(pos):
+	if get_tree().current_scene.has_method("is_position_too_far"):
+		return get_tree().current_scene.is_position_too_far(pos)
 	else:
 		return false
 
@@ -40,6 +42,11 @@ func remove_shields(n):
 func apple_eaten():
 	get_tree().current_scene.apple_eaten()
 
+func plane_explosion_at(pos):
+	get_tree().current_scene.plane_explosion_at(pos)
+
+func move_to_layer(plane, layer):
+	get_tree().current_scene.move_to_layer(plane, layer)
 
 
 ############################################################################################################

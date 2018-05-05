@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sparks/plane_shadow.gd" type="Script" id=1]
+[ext_resource path="res://sparks/gen_plane_shadow.tscn" type="PackedScene" id=2]
+
+[node name="plane_shadow" type="Node2D"]
+
+modulate = Color( 1, 1, 1, 0.408824 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="__sprite" parent="." index="0" instance=ExtResource( 2 )]
+
+visible = false
+
+[node name="sprite" type="Sprite" parent="." index="1"]
+
+_sections_unfolded = [ "Animation" ]
+
+

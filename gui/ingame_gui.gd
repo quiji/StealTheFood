@@ -54,8 +54,11 @@ func add_shields(n):
 func remove_shields(n):
 	$armor_indicator.remove_shields(n)
 
-func update_score(apple_count):
-	$ApplePoints.text = "Apple Points: " + str(apple_count)
+func update_score(apple_count, is_score=false):
+	if is_score:
+		$ApplePoints.text = "Score: " + str(apple_count)
+	else:
+		$ApplePoints.text = "Apple Points: " + str(apple_count)
 
 func pause_menu(val):
 	if val:

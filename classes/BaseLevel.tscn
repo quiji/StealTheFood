@@ -10,6 +10,8 @@
 
 [node name="base_tiles" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="bkg" type="TextureRect" parent="base_tiles" index="0"]
 
 anchor_left = 0.0
@@ -156,13 +158,26 @@ editor/display_folded = true
 
 [node name="fruit_location" type="Node2D" parent="." index="5"]
 
-[node name="battlefield" type="YSort" parent="." index="6"]
+[node name="shadows" type="Node2D" parent="." index="6"]
+
+[node name="ground_layer" type="Node2D" parent="." index="7"]
+
+[node name="low_layer" type="Node2D" parent="." index="8"]
+
+[node name="medium_layer" type="Node2D" parent="." index="9"]
+
+[node name="high_layer" type="Node2D" parent="." index="10"]
+
+position = Vector2( 0, -1 )
+
+[node name="battlefield" type="YSort" parent="." index="11"]
 
 sort_enabled = true
+_sections_unfolded = [ "Sort" ]
 
-[node name="indicators" type="Node2D" parent="." index="7"]
+[node name="indicators" type="Node2D" parent="." index="12"]
 
-[node name="front_mountains" type="Node2D" parent="." index="8"]
+[node name="front_mountains" type="Node2D" parent="." index="13"]
 
 editor/display_folded = true
 
@@ -214,7 +229,7 @@ position = Vector2( 1302, 812 )
 
 position = Vector2( 762, 812 )
 
-[node name="enabler" type="VisibilityEnabler2D" parent="." index="9"]
+[node name="enabler" type="VisibilityEnabler2D" parent="." index="14"]
 
 rect = Rect2( -10, -10, 20, 20 )
 pause_animations = true

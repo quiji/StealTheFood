@@ -6,7 +6,7 @@
 [ext_resource path="res://characters/raccoon/gen_propeller.tscn" type="PackedScene" id=4]
 [ext_resource path="res://sound/plane_sounds.tscn" type="PackedScene" id=5]
 
-[node name="raccoon" type="KinematicBody2D"]
+[node name="raccoon" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 15

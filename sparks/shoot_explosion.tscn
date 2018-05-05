@@ -70,8 +70,6 @@ _sections_unfolded = [ "Animation", "Color", "Initial Velocity", "Scale", "Trail
 
 [node name="shoot_explosion" type="Particles2D" index="0"]
 
-z_index = 1
-z_as_relative = false
 emitting = false
 amount = 20
 lifetime = 1.0

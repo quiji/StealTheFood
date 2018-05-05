@@ -85,7 +85,6 @@ _sections_unfolded = [ "Angular Velocity", "Animation", "Color", "Gravity", "Ini
 
 [node name="explosion" type="Particles2D" index="0"]
 
-z_index = 1
 emitting = false
 amount = 1000
 lifetime = 2.0

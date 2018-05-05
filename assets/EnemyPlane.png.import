@@ -7,10 +7,10 @@ path="res://.import/EnemyPlane.png-b21c9a6dfc08714463daa0a405dbb5ee.stex"
 [deps]
 
 source_file="res://assets/EnemyPlane.png"
-source_md5="c2d87df36703abf328b00e73da2d8c5d"
+source_md5="090e1100246cc8a9888e0ae02f5517a5"
 
 dest_files=[ "res://.import/EnemyPlane.png-b21c9a6dfc08714463daa0a405dbb5ee.stex" ]
-dest_md5="981142d6a5a6b854740d973256cf80a8"
+dest_md5="7a7e5e4863dd8d25ca31b09198e1522c"
 
 [params]
 
